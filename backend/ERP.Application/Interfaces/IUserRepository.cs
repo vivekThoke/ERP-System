@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ERP.Domain.Entities;
+
+namespace ERP.Application.Interfaces
+{
+    public interface IUserRepository
+    {
+        Task<User> GetByEmailByAsync(string email);
+        Task AddAsync(User user);
+    }
+}
