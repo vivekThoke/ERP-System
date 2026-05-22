@@ -1,6 +1,14 @@
-version: '3.8'
-
 services:
+  api:
+    build:
+      context: ...
+      dockerfile: ERPSystem/Dockerfile
+    container_name: erp_api
+    ports:
+      - "5000:8080"
+    depends_on:
+      - postgres
+
   postgres:
     image: postgres:15
     container_name: erp_postgres
